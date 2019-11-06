@@ -1,0 +1,23 @@
+<%=form_for @song do |t|%>
+  <%if @song.errors%>
+    <%@song.errors.full_messages.each do |message|%>
+      <p><%=message%></p>
+    <%end%>
+  <%end%>
+  <%=t.label :title%>
+  <%=t.text_field :title%>
+  <br><br>
+  <%=t.label :artist_name%>
+  <%=t.text_field :artist_name%>
+  <br><br>
+  <%=t.label :genre%>
+  <%=t.text_field :genre%>
+  <br><br>
+  <%=t.label :released%>
+  <%=t.check_box :released%>
+  <br><br>
+  <%=t.label :release_year%>
+  <%=t.number_field :release_year%>
+  <br><br>
+  <%=t.submit "Create Song"%>
+<%end%>

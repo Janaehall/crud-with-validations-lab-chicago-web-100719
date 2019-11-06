@@ -1,0 +1,23 @@
+<h1><%=@song.title%></h1>
+
+<h3>Artist:</h3>
+<p><%=@song.artist_name%></p>
+<br>
+
+<h3>Genre:</h3>
+<%if @song.genre%>
+  <p><%=@song.genre%></p>
+<%else%>
+  <p>None</p>
+<%end%>
+<br>
+
+<h3>Release Year:</h3>
+<%if @song.released%>
+<p><%=@song.release_year%></p>
+<%else%>
+<p>This song has not been released.</p>
+<%end%>
+
+<%=link_to("Delete Song", @song, method: :delete)%>
+
